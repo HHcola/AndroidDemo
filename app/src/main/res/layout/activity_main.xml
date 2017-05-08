@@ -6,11 +6,38 @@
     tools:context="com.androiddemo.androiddemo.MainActivity">
 
 
-    <Button
+    <com.androiddemo.androiddemo.modulecommunication.ui.CustomButton
         android:id="@+id/btn_memory"
         android:layout_width="match_parent"
         android:layout_height="50dip"
         android:text="Send Memory"
+        android:textSize="13sp"
+        />
+
+    <com.androiddemo.androiddemo.modulecommunication.ui.CustomButton
+        android:id="@+id/btn_thread"
+        android:layout_below="@+id/btn_memory"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:text="Thread"
+        android:textSize="13sp"
+        />
+
+    <Button
+        android:id="@+id/btn_invalidate"
+        android:layout_below="@+id/btn_thread"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:text="invalidate"
+        android:textSize="13sp"
+        />
+
+    <Button
+        android:id="@+id/btn_okhttp"
+        android:layout_below="@+id/btn_invalidate"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:text="OkHttp"
         android:textSize="13sp"
         />
 </RelativeLayout>
