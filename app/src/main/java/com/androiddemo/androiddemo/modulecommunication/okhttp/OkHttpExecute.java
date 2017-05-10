@@ -9,11 +9,12 @@ import com.squareup.okhttp.Response;
 
 import java.io.IOException;
 
+
 /**
  * Created by hewei05 on 2017/5/8.
  */
 
-public class OkHttpExecute {
+public class OkHttpExecute implements OkHttpImpl {
 
     private static final String TAG = OkHttpExecute.class.getSimpleName();
     private OkHttpClient mOkHttpClient;
@@ -32,7 +33,6 @@ public class OkHttpExecute {
                 @Override
                 public void onFailure(Request request, IOException e) {
                     Log.d(TAG, "Execute: onFailure" + e.getMessage());
-
                 }
 
                 @Override

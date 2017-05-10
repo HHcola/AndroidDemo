@@ -10,7 +10,8 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import com.androiddemo.androiddemo.modulecommunication.ActivityClient;
-import com.androiddemo.androiddemo.modulecommunication.okhttp.OkHttpExecute;
+import com.androiddemo.androiddemo.modulecommunication.okhttp.OkHttp3Execute;
+import com.androiddemo.androiddemo.modulecommunication.okhttp.OkHttpImpl;
 import com.androiddemo.androiddemo.modulecommunication.thread.AThread;
 import com.androiddemo.androiddemo.modulecommunication.thread.BThread;
 import com.androiddemo.androiddemo.modulecommunication.ui.CustomButton;
@@ -21,7 +22,7 @@ public class MainActivity extends Activity  implements View.OnClickListener{
     private volatile boolean stop = false;
     private CustomButton customButton;
     private Handler handler;
-    private OkHttpExecute mOkHttpExecute;
+    private OkHttpImpl mOkHttpExecute;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -106,7 +107,8 @@ public class MainActivity extends Activity  implements View.OnClickListener{
 
     private void onOkHttpRequest() {
         if (mOkHttpExecute == null) {
-            mOkHttpExecute = new OkHttpExecute();
+//            mOkHttpExecute = new OkHttpExecute();
+            mOkHttpExecute = new OkHttp3Execute();
         }
         mOkHttpExecute.Execute();
     }
